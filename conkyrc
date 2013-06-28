@@ -30,9 +30,9 @@ override_utf8_locale no
 uppercase no
 
 
-# Lua Load ...testing below must remove and write own script...
-#lua_load script_path
-#call lua_functions here
+# Lua Load ... script path below, hook underneath to load script
+lua_load /home/ssn/.config/conky/graphs.lua
+lua_draw_hook_pre conky_main
 
 #  Output #
 TEXT
