@@ -22,12 +22,13 @@ default_shade_color black
 default_outline_color black
 alignment top_right
 gap_x 5
-gap_y 25
+gap_y 23
 no_buffers yes
 cpu_avg_samples 2
 text_buffer_size 1024
 override_utf8_locale no
 uppercase no
+
 
 # Lua Load ...testing below must remove and write own script...
 #lua_load script_path
@@ -47,8 +48,7 @@ ${cpugraph cpu0}
 
 RAM Usage 
 $hr
-$alignr${mem mem}/4GiB - $memperc%
-${memgraph}
+$alignr${mem}/${memmax} - $memperc%
 
 process$alignr cpu% mem%
 ${top name 1}$alignr${top cpu 1}   ${top mem 1}
@@ -63,8 +63,6 @@ ${diskiograph /dev/sda1}
 Network 
 $hr
 ${alignr}${downspeed wlan0} I/O
-${downspeedgraph wlan0}
-
 in/out ${alignr}${totaldown wlan0}/${totalup wlan0}
 private ip${alignr}${addr wlan0}
 public ip${alignr}${curl ifconfig.me}
