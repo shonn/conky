@@ -46,6 +46,7 @@ function ping_server(server_ip)
   local rc = io.popen('echo $?', 'r') --get return code
   local out = rc:read('*a')
   rc:close()
-  if out == 0 then return "Up" end
+  print(out)
+  if out then return "Up" end
   return "Down"
 end
