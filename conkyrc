@@ -32,7 +32,7 @@ uppercase no
 
 # Lua Load ... script path below, hook underneath to load script
 lua_load /home/ssn/.config/conky/graphs.lua
-lua_draw_hook_pre conky_main
+lua_draw_hook_pre check_server
 
 #  Output #
 TEXT
